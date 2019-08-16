@@ -1,3 +1,5 @@
+cordova.define("com.advanetsystems.cordova.camera", function(require, exports, module) {
+
 var argscheck = require('cordova/argscheck'),
 exec = require('cordova/exec');
 
@@ -6,13 +8,12 @@ var cameraExport = {};
 cameraExport.init = function(successCallback, errorCallback, options) {
     options = options || {};
     var getValue = argscheck.getValue;
-
-	var locationTop = getValue(options.locationTop, 50);
-	var locationLeft = getValue(options.locationLeft, 50);
-	var width = getValue(options.width, 200);
-	var height = getValue(options.height, 200);
-	
-	var args = [width, height, locationTop, locationLeft];
+    
+    var locationTop = getValue(options.locationTop, 50);
+    var locationLeft = getValue(options.locationLeft, 50);
+    var width = getValue(options.width, 200);
+    var height = getValue(options.height, 200);
+    var args = [width, height, locationTop, locationLeft];
 
     exec(successCallback, errorCallback, "BackgroundCamera", "init", args);
     return true;
@@ -37,3 +38,4 @@ cameraExport.takePhoto = function(successCallback, errorCallback) {
 
 
 module.exports = cameraExport;
+});
