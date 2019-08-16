@@ -15,7 +15,13 @@
  </js-module>
     
  <platform name="android">
-    <config-file target="AndroidManifest.xml" parent="/*">
+     <config-file target="res/xml/config.xml" parent="/*">
+       <feature name="BackgroundCamera">
+           <param name="android-package" value="com.akotkowski.camera.BackgroundCameraLauncher"/>
+       </feature>
+     </config-file>
+    
+     <config-file target="AndroidManifest.xml" parent="/*">
        <uses-permission android:name="android.permission.CAMERA" />
     </config-file>
 
