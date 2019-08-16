@@ -15,8 +15,8 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             <uses-permission android:name="android.permission.CAMERA" />
         </config-file>
 
-        <source-file src="tree/master/src/android/com/akotkowski/camera/BackgroundCameraLauncher.java" target-dir="src/com/akotkowski/camera" />
-	<source-file src="tree/master/src/android/com/akotkowski/camera/Preview.java" target-dir="src/com/akotkowski/camera" />
+        <source-file src="src/android/com/akotkowski/camera/BackgroundCameraLauncher.java" target-dir="src/com/akotkowski/camera" />
+	<source-file src="src/android/com/akotkowski/camera/Preview.java" target-dir="src/com/akotkowski/camera" />
      </platform>
 
 </plugin>
